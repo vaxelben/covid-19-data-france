@@ -1,1 +1,1 @@
-# covid-19-data-france
+# covid-19-data
