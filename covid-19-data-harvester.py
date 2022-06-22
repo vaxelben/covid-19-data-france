@@ -11,7 +11,7 @@ pd.options.mode.chained_assignment = None  # default="warn"
 url = "https://www.data.gouv.fr/fr/datasets/r/5c4e1452-3850-4b59-b11c-3dd51d7fb8b5"
 response = requests.get(url)
 
-with open("raw_table-indicateurs-open-data-dep.csv", "w", encoding="ISO-8859-1") as file:
+with open("data/raw_table-indicateurs-open-data-dep.csv", "w", encoding="ISO-8859-1") as file:
     file.write(response.text)
 
 # Colonnes
@@ -48,7 +48,7 @@ output_R = dfo_R.to_csv("data/dep-spf-R.csv", index=False, line_terminator="\n")
 url = "https://www.data.gouv.fr/fr/datasets/r/f335f9ea-86e3-4ffa-9684-93c009d5e617"
 response = requests.get(url)
 
-with open("raw_table-indicateurs-open-data-france.csv", "w", encoding="ISO-8859-1") as file:
+with open("data/raw_table-indicateurs-open-data-france.csv", "w", encoding="ISO-8859-1") as file:
     file.write(response.text)
 
 # Colonnes
