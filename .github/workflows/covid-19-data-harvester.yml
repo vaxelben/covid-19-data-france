@@ -2,7 +2,7 @@ name: covid-19-data-harvester
 
 on:
   schedule:
-    - cron: '56 5 * * *' # runs at 18:00 UTC (20:00 France)
+    - cron: '0 8 * * *' # runs at 18:00 UTC (20:00 France)
 
 jobs:
   build:
