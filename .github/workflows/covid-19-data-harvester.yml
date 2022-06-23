@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: checkout repo content
         uses: actions/checkout@v2 # checkout the repository content to github runner
+        with:
+          fetch-depth: 0
 
       - name: setup python
         uses: actions/setup-python@v2
@@ -42,4 +44,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
-          force: true
