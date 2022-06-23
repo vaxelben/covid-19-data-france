@@ -1,5 +1,6 @@
 import requests
 import pandas as pd
+import io
 import os
 import smtplib
 from email.message import EmailMessage
@@ -11,12 +12,11 @@ pd.options.mode.chained_assignment = None  # default="warn"
 url = "https://www.data.gouv.fr/fr/datasets/r/5c4e1452-3850-4b59-b11c-3dd51d7fb8b5"
 response = requests.get(url)
 
-with open("data/raw_table-indicateurs-open-data-dep.csv", "w", encoding="ISO-8859-1") as file:
-    file.write(response.text)
 
 # Colonnes
 # "dep","date","reg","lib_dep","lib_reg","tx_pos","tx_incid","TO","R","hosp","rea","rad","dchosp","reg_rea","incid_hosp","incid_rea","incid_rad","incid_dchosp","reg_incid_rea","pos","pos_7j","cv_dose1"
-df_raw = pd.read_csv("data/raw_table-indicateurs-open-data-dep.csv", dtype={"dep": "str"})
+df_raw = pd.read_csv(io.StringIO(response.text), dtype={"dep": "str"})
+
 
 # Sort dataframe by date
 df_raw["date"] = pd.to_datetime(df_raw.date)
@@ -48,12 +48,11 @@ output_R = dfo_R.to_csv("data/dep-spf-R.csv", index=False, line_terminator="\n")
 url = "https://www.data.gouv.fr/fr/datasets/r/f335f9ea-86e3-4ffa-9684-93c009d5e617"
 response = requests.get(url)
 
-with open("data/raw_table-indicateurs-open-data-france.csv", "w", encoding="ISO-8859-1") as file:
-    file.write(response.text)
 
 # Colonnes
 # "date","tx_pos","tx_incid","TO","R","rea","hosp","rad","dchosp","incid_rea","incid_hosp","incid_rad","incid_dchosp","conf","conf_j1","pos","esms_dc","dc_tot","pos_7j","cv_dose1","esms_cas"
-df_raw = pd.read_csv("data/raw_table-indicateurs-open-data-france.csv")
+df_raw = pd.read_csv(io.StringIO(response.text))
+
 
 
 # Sort dataframe by date
@@ -92,6 +91,7 @@ dfo_latest_R = dfo_R.iloc[dfo_R["date"].argmax():]
 dfo_latest_R.rename(columns = {"R":"valeur"}, inplace = True)
 output_R = dfo_R.to_csv("data/france-spf-R.csv", index=False, line_terminator="\n")
 output_latest_R = dfo_latest_R.to_csv("data/france-spf-latest-R.csv", index=False, line_terminator="\n")
+
 
 # Get mail informations
 EMAIL_SENDER = os.environ.get('EMAIL_SENDER')
