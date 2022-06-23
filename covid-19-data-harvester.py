@@ -16,7 +16,7 @@ with open("data/raw_table-indicateurs-open-data-dep.csv", "w", encoding="ISO-885
 
 # Colonnes
 # "dep","date","reg","lib_dep","lib_reg","tx_pos","tx_incid","TO","R","hosp","rea","rad","dchosp","reg_rea","incid_hosp","incid_rea","incid_rad","incid_dchosp","reg_incid_rea","pos","pos_7j","cv_dose1"
-df_raw = pd.read_csv("raw_table-indicateurs-open-data-dep.csv", dtype={"dep": "str"})
+df_raw = pd.read_csv("data/raw_table-indicateurs-open-data-dep.csv", dtype={"dep": "str"})
 
 # Sort dataframe by date
 df_raw["date"] = pd.to_datetime(df_raw.date)
@@ -53,7 +53,7 @@ with open("data/raw_table-indicateurs-open-data-france.csv", "w", encoding="ISO-
 
 # Colonnes
 # "date","tx_pos","tx_incid","TO","R","rea","hosp","rad","dchosp","incid_rea","incid_hosp","incid_rad","incid_dchosp","conf","conf_j1","pos","esms_dc","dc_tot","pos_7j","cv_dose1","esms_cas"
-df_raw = pd.read_csv("raw_table-indicateurs-open-data-france.csv")
+df_raw = pd.read_csv("data/raw_table-indicateurs-open-data-france.csv")
 
 
 # Sort dataframe by date
