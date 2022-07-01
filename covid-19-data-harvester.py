@@ -15,7 +15,7 @@ response = requests.get(url)
 
 # Colonnes
 # "dep","date","reg","lib_dep","lib_reg","tx_pos","tx_incid","TO","R","hosp","rea","rad","dchosp","reg_rea","incid_hosp","incid_rea","incid_rad","incid_dchosp","reg_incid_rea","pos","pos_7j","cv_dose1"
-df_raw = pd.read_csv(io.StringIO(response.text), dtype={"dep": "str"})
+df_raw = pd.read_csv(io.StringIO(response.text), dtype={"dep": "str"}, encoding="ISO-8859-1")
 
 
 # Sort dataframe by date
@@ -51,7 +51,7 @@ response = requests.get(url)
 
 # Colonnes
 # "date","tx_pos","tx_incid","TO","R","rea","hosp","rad","dchosp","incid_rea","incid_hosp","incid_rad","incid_dchosp","conf","conf_j1","pos","esms_dc","dc_tot","pos_7j","cv_dose1","esms_cas"
-df_raw = pd.read_csv(io.StringIO(response.text))
+df_raw = pd.read_csv(io.StringIO(response.text), encoding="ISO-8859-1")
 
 
 
