@@ -11,11 +11,11 @@ pd.options.mode.chained_assignment = None  # default="warn"
 # Indicateurs par département
 url = "https://www.data.gouv.fr/fr/datasets/r/5c4e1452-3850-4b59-b11c-3dd51d7fb8b5"
 response = requests.get(url)
-
+response.encoding = "UTF-8"
 
 # Colonnes
 # "dep","date","reg","lib_dep","lib_reg","tx_pos","tx_incid","TO","R","hosp","rea","rad","dchosp","reg_rea","incid_hosp","incid_rea","incid_rad","incid_dchosp","reg_incid_rea","pos","pos_7j","cv_dose1"
-df_raw = pd.read_csv(io.StringIO(response.text), dtype={"dep": "str"}, encoding="ISO-8859-1")
+df_raw = pd.read_csv(io.StringIO(response.text), dtype={"dep": "str"}, encoding="UTF-8")
 
 
 # Sort dataframe by date
@@ -47,11 +47,11 @@ output_R = dfo_R.to_csv("data/dep-spf-R.csv", index=False, line_terminator="\n")
 # Indicateurs France
 url = "https://www.data.gouv.fr/fr/datasets/r/f335f9ea-86e3-4ffa-9684-93c009d5e617"
 response = requests.get(url)
-
+response.encoding = "UTF-8"
 
 # Colonnes
 # "date","tx_pos","tx_incid","TO","R","rea","hosp","rad","dchosp","incid_rea","incid_hosp","incid_rad","incid_dchosp","conf","conf_j1","pos","esms_dc","dc_tot","pos_7j","cv_dose1","esms_cas"
-df_raw = pd.read_csv(io.StringIO(response.text), encoding="ISO-8859-1")
+df_raw = pd.read_csv(io.StringIO(response.text), encoding="UTF-8")
 
 
 
