@@ -67,7 +67,8 @@ df_R = df_raw.dropna(subset=["R"])
 # Example file
 dfo_example = df_tx_incid.drop(["rea","hosp","rad","dchosp","incid_rea","incid_hosp","incid_rad","incid_dchosp","conf","conf_j1","pos","esms_dc","dc_tot","pos_7j","cv_dose1","esms_cas"], axis=1)
 dfo_example.rename(columns = {"date":"Date", "tx_incid":"Taux d'incidence", "tx_pos":"Taux de positivité des tests", "R":"Facteur de reproduction du virus", "TO":"Tension hospitalière"}, inplace = True)
-output_tx_incid = dfo_tx_incid.to_csv("data/sample.csv", index=False, line_terminator="\n")
+dfo2_example = dfo_example.drop(dfo_example.index[20:])
+output_sample = dfo2_example.to_csv("data/sample.csv", index=False, line_terminator="\n")
 
 
 dfo_tx_incid = df_tx_incid.drop(["tx_pos","TO","R","rea","hosp","rad","dchosp","incid_rea","incid_hosp","incid_rad","incid_dchosp","conf","conf_j1","pos","esms_dc","dc_tot","pos_7j","cv_dose1","esms_cas"], axis=1)
