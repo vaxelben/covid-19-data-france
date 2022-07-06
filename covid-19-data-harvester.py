@@ -29,7 +29,7 @@ df_R = df_raw.dropna(subset=["R"])
 
 # Example file
 dfo_example = df_R.drop(["reg","lib_reg","hosp","rea","rad","dchosp","reg_rea","incid_hosp","incid_rea","incid_rad","incid_dchosp","reg_incid_rea","pos","pos_7j","cv_dose1"], axis=1)
-dfo_example.rename(columns = {"date":"Date", "dep":"Département", "lib_dep":"Libellé département", "tx_incid":"Taux d'incidence", "tx_pos":"Taux de positivité des tests", "R":"Facteur de reproduction du virus", "TO":"Tension hospitalière"}, inplace = True)
+dfo_example.rename(columns = {"date":"Date", "dep":"Département", "lib_dep":"Libellé département", "tx_incid":"Taux d'incidence", "tx_pos":"Taux de positivité des tests", "R":"Facteur de reproduction du virus (R0)", "TO":"Tension hospitalière"}, inplace = True)
 dfo2_example = dfo_example.drop(dfo_example.index[20:])
 output_sample = dfo2_example.to_csv("data/sample.csv", index=False, line_terminator="\n")
 
