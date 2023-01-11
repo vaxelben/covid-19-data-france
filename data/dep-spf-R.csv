@@ -4844,7 +4844,7 @@ dep,date,lib_dep,valeur
 971,2020-12-19,Guadeloupe,1.28
 972,2020-12-19,Martinique,1.25
 973,2020-12-19,Guyane,1.34
-974,2020-12-19,Réunion,1
+974,2020-12-19,Réunion,1.0
 976,2020-12-19,Mayotte,0.98
 01,2020-12-26,Ain,0.85
 02,2020-12-26,Aisne,0.89
@@ -5345,7 +5345,7 @@ dep,date,lib_dep,valeur
 94,2021-01-23,Val-de-Marne,1.1
 95,2021-01-23,Val-d'Oise,1.1
 971,2021-01-23,Guadeloupe,1.02
-972,2021-01-23,Martinique,1
+972,2021-01-23,Martinique,1.0
 973,2021-01-23,Guyane,0.82
 974,2021-01-23,Réunion,1.3
 976,2021-01-23,Mayotte,1.44
@@ -6152,10 +6152,10 @@ dep,date,lib_dep,valeur
 93,2021-03-20,Seine-Saint-Denis,1.2
 94,2021-03-20,Val-de-Marne,1.2
 95,2021-03-20,Val-d'Oise,1.2
-971,2021-03-20,Guadeloupe,1
+971,2021-03-20,Guadeloupe,1.0
 972,2021-03-20,Martinique,1.51
 973,2021-03-20,Guyane,1.3
-974,2021-03-20,Réunion,1
+974,2021-03-20,Réunion,1.0
 976,2021-03-20,Mayotte,0.61
 01,2021-03-27,Ain,1.25
 02,2021-03-27,Aisne,1.15
@@ -10091,7 +10091,7 @@ dep,date,lib_dep,valeur
 94,2021-12-18,Val-de-Marne,1.28
 95,2021-12-18,Val-d'Oise,1.28
 971,2021-12-18,Guadeloupe,1.24
-972,2021-12-18,Martinique,1
+972,2021-12-18,Martinique,1.0
 973,2021-12-18,Guyane,1.09
 974,2021-12-18,Réunion,1.33
 976,2021-12-18,Mayotte,1.24
@@ -10394,7 +10394,7 @@ dep,date,lib_dep,valeur
 94,2022-01-08,Val-de-Marne,1.36
 95,2022-01-08,Val-d'Oise,1.36
 971,2022-01-08,Guadeloupe,2.2
-972,2022-01-08,Martinique,2
+972,2022-01-08,Martinique,2.0
 973,2022-01-08,Guyane,2.32
 974,2022-01-08,Réunion,1.69
 976,2022-01-08,Mayotte,2.03
@@ -14942,7 +14942,7 @@ dep,date,lib_dep,valeur
 972,2022-11-19,Martinique,1.29
 973,2022-11-19,Guyane,2.18
 974,2022-11-19,Réunion,1.31
-976,2022-11-19,Mayotte,2
+976,2022-11-19,Mayotte,2.0
 01,2022-11-26,Ain,1.35
 02,2022-11-26,Aisne,1.3
 03,2022-11-26,Allier,1.35
@@ -15241,7 +15241,7 @@ dep,date,lib_dep,valeur
 93,2022-12-10,Seine-Saint-Denis,1.11
 94,2022-12-10,Val-de-Marne,1.11
 95,2022-12-10,Val-d'Oise,1.11
-971,2022-12-10,Guadeloupe,1
+971,2022-12-10,Guadeloupe,1.0
 972,2022-12-10,Martinique,0.99
 973,2022-12-10,Guyane,0.73
 974,2022-12-10,Réunion,1.2
@@ -15647,5 +15647,4 @@ dep,date,lib_dep,valeur
 971,2023-01-07,Guadeloupe,0.71
 972,2023-01-07,Martinique,0.67
 973,2023-01-07,Guyane,0.52
-974,2023-01-07,Réunion,0.70
-976,2023-01-07,Mayotte,NC
+974,2023-01-07,Réunion,0.7
